@@ -1,7 +1,11 @@
+#include "selector_lan_scene.h"
+#include "selector_single_scene.h"
+#include "selector_internet_scene.h"
 #include "scene_manager.h"
 #include "menu_scene.h"
-#include "game_scene.h"
-#include "selector_scene.h"
+#include "game_single_scene.h"
+#include "game_lan_scene.h"
+
 
 SceneManager* SceneManager::manager = nullptr;
 
@@ -18,11 +22,14 @@ SceneManager* SceneManager::getInstance()
 SceneManager::SceneManager()
 {
     menu_scene = new MenuScene();
-    game_scene = new GameScene();
-    selector_scene = new SelectorScene();
+    game_single_scene = new GameSingleScene();
+    selector_lan_scene = new SelectorLanScene();
+    game_lan_scene = new GameLanScene();
+    selector_single_scene = new SelectorSingleScene();
+    selector_internet_scene = new SelectorInternetScene();
 
     current_scene = menu_scene;
-    switchTo(SceneType::GAME);
+    switchTo(SceneType::MENU);
 }
 
 SceneManager::~SceneManager() = default;
@@ -37,13 +44,21 @@ void SceneManager::switchTo(SceneType type)
     case SceneType::MENU:
         current_scene = menu_scene;
         break;
-    case SceneType::GAME:
-        current_scene = game_scene;
+    case SceneType::GAME_SINGLE:
+        current_scene = game_single_scene;
         break;
-    case SceneType::SELECTOR:
-        current_scene = selector_scene;
+    case SceneType::SELECTOR_LAN:
+        current_scene = selector_lan_scene;
         break;
-
+    case SceneType::GAME_LAN:
+        current_scene = game_lan_scene;
+        break;
+    case SceneType::SELECTOR_SINGLE:
+        current_scene = selector_single_scene;
+        break;
+    case SceneType::SELECTOR_INTERNET:
+        current_scene = selector_internet_scene;
+        break;
     default:
         break;
     }

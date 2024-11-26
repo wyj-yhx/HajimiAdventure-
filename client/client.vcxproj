@@ -138,19 +138,24 @@
     <ClInclude Include="camera.h" />
     <ClInclude Include="character.h" />
     <ClInclude Include="character_manager.h" />
-    <ClInclude Include="game_scene.h" />
+    <ClInclude Include="game_lan_scene.h" />
+    <ClInclude Include="game_single_scene.h" />
     <ClInclude Include="menu_scene.h" />
     <ClInclude Include="path.h" />
     <ClInclude Include="player_hajimi.h" />
     <ClInclude Include="player_manbo.h" />
+    <ClInclude Include="protocol.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="resources_manager.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="scene_manager.h" />
-    <ClInclude Include="selector_scene.h" />
+    <ClInclude Include="selector_internet_scene.h" />
+    <ClInclude Include="selector_single_scene.h" />
+    <ClInclude Include="selector_lan_scene.h" />
     <ClInclude Include="timer.h" />
     <ClInclude Include="util.h" />
     <ClInclude Include="vector2.h" />
+    <ClInclude Include="wyjbutton.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="client.rc" />

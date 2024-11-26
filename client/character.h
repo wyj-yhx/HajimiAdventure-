@@ -2,6 +2,8 @@
 #define CHARACTER_H
 
 #include "animation.h"
+#include <codecvt>      //编码转换头文件
+#include <iostream>
 
 class Character
 {
@@ -71,6 +73,11 @@ public:
 	{
 		if (!current_anim) return;
 		current_anim->on_render(camera);
+
+		settextcolor(RGB(0, 125, 255));
+		outtextxy((int)(position.x - camera.get_position().x - textwidth(name.c_str()) / 2), (int)(position.y - camera.get_position().y - 70), name.c_str());
+
+		//std::cout << name << " " << wstr_line.c_str() << std::endl;
 	}
 
 	void set_position(const Vector2& position)
@@ -88,6 +95,12 @@ public:
 		this->pos_target = pos_target;
 	}
 
+	void set_name(const std::string& name)
+	{
+		static std::wstring_convert<std::codecvt_utf8<wchar_t>, wchar_t> convert;   //UTF-8编码转换器
+		this->name = convert.from_bytes(name);       //UTF-8编码转换为宽字符
+	}
+
 protected:
 	const float SPEED_RUN = 100.0f;
 
@@ -95,6 +108,8 @@ protected:
 	Vector2 position;	//当前位置
 	Vector2 velocity;	//速度
 	Vector2 pos_target;	//目标位置
+	
+	std::wstring  name;	//名字
 
 	Animation anim_idle_up;
 	Animation anim_idle_down;

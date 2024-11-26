@@ -56,7 +56,7 @@
     <ClInclude Include="scene.h">
       <Filter>头文件\scene</Filter>
     </ClInclude>
-    <ClInclude Include="game_scene.h">
+    <ClInclude Include="game_single_scene.h">
       <Filter>头文件\scene</Filter>
     </ClInclude>
     <ClInclude Include="atlas.h">
@@ -92,7 +92,22 @@
     <ClInclude Include="menu_scene.h">
       <Filter>头文件\scene</Filter>
     </ClInclude>
-    <ClInclude Include="selector_scene.h">
+    <ClInclude Include="selector_lan_scene.h">
+      <Filter>头文件\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="wyjbutton.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="protocol.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="game_lan_scene.h">
+      <Filter>头文件\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="selector_single_scene.h">
+      <Filter>头文件\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="selector_internet_scene.h">
       <Filter>头文件\scene</Filter>
     </ClInclude>
   </ItemGroup>

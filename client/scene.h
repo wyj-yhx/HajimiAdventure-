@@ -10,7 +10,8 @@ enum class Stage
 {
     Waiting,	//等待玩家加入
     Ready,		//准备开始
-    Racing		//比赛进行中
+    Racing,		//比赛进行中
+    End		    //比赛结束
 };
 
 //定义一个场景类，用于管理游戏中的场景

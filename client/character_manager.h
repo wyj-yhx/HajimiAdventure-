@@ -3,7 +3,6 @@
 
 #include "character.h"
 
-
 //½ÇÉ«¹ÜÀíÆ÷
 class CharacterManager
 {
@@ -26,6 +25,7 @@ private:
 private:
 	CharacterManager();
 	~CharacterManager();
+
 };
 
 
